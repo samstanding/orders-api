@@ -9,9 +9,16 @@ module Api::V1
       def create 
         @order = @status.orders.create! (order_params)
         render json: @order
-
       end
 
+      def destroy
+        @order = @status.orders.find(params[:id])
+        if @order.destroy
+          head :no_content, status: :ok
+        else
+          render json: @idea.errors, status: :unprocessable_entity
+        end
+      end
       private
 
       def set_status
