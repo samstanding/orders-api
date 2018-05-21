@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_18_175433) do
+ActiveRecord::Schema.define(version: 2018_05_21_172007) do
 
   create_table "orders", force: :cascade do |t|
     t.string "pickup"
@@ -18,6 +18,14 @@ ActiveRecord::Schema.define(version: 2018_05_18_175433) do
     t.string "when"
     t.string "vehicle"
     t.decimal "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "status_id"
+    t.index ["status_id"], name: "index_orders_on_status_id"
+  end
+
+  create_table "statuses", force: :cascade do |t|
+    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
