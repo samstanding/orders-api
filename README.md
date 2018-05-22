@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
 * Deployment instructions
 
-* ...
+This is an API to house order data from my React front-end. You can find that repo [here](https://github.com/samstanding/orders-client)
+
+Fork or clone this over to your machine and install the dependecies `bundle install`.
+
+Migrate the database `rails db:migrate`.
+
+Kick up the server on port 3001 `rails server -p 3001` and enjoy! 
+
+* Ruby version
+5.2.0
+
