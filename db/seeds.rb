@@ -6,21 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-orders = Order.create(
+statuses = Status.create(
     [
         {
-            pickup: 'Fourth Baptist Church, Forestview Lane North, Plymouth, MN, USA',
-            delivery: 'MCAD, Stevens Avenue, Minneapolis, MN, USA',
-            when: 'ASAP',
-            vehicle: 'mid sized',
-            price: '22.00'
+            status: "Submitted"
         },
         {
-            pickup: '8th Street Market, Southeast 8th Street, Minneapolis, MN, USA',
-            delivery: 'Bush Lake Road, Bloomington, MN, USA',
-            when: 'ASAP',
-            vehicle: 'cargo van',
-            price: '41.48'
-        }
-    ]
-)
+            status: "Confirmed"
+        },
+        {
+            status: "Active"
+        },
+        {
+            status: "Completed"
+        },
+    ])
