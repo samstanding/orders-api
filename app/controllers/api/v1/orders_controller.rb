@@ -19,6 +19,12 @@ module Api::V1
           render json: @idea.errors, status: :unprocessable_entity
         end
       end
+
+      def update 
+        @order = @status.orders.find(params[:id])
+        @order.update_attributes(order_params)
+        render json: @order
+      end
       private
 
       def set_status
